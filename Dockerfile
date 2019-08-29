@@ -16,6 +16,7 @@ yum install -y gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-dev
 yum clean all
 
 RUN curl -sSL https://rvm.io/mpapis.asc | gpg --import - && \
+curl -sSL https://rvm.io/pkuczynski.asc  | gpg2 --import - && \
 curl -L get.rvm.io | bash -s stable && \
 source /etc/profile.d/rvm.sh && \
 /usr/local/rvm/bin/rvm reload && \
